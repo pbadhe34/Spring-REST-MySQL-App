@@ -36,6 +36,7 @@ public class EmpReadController {
 	@GetMapping(value= {"/getAll"},produces= {"application/json","application/xml"})
 	@ApiOperation(value = "Find All the Employee", notes = "Provides all the employee records")
 	public ResponseEntity<List<Employee>> getAllEmp() throws DatabaseException  {
+		System.out.println("This is from app Branch");
 		List<Employee> list=service.getAllEmp();
 		return new ResponseEntity<List<Employee>>(list,HttpStatus.OK);
 	}
